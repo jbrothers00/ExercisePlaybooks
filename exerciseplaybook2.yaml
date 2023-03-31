@@ -1,0 +1,10 @@
+---
+- name: Print the Date
+  hosts: localhost 
+  tasks:
+    - name: Print the date using command module 
+      command: date
+      register: date
+    - debug: 
+       var: date.stdout
+

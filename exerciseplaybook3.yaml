@@ -1,0 +1,12 @@
+---
+- name: Run a python script
+  hosts: localhost
+  tasks:
+    - name: Execute a python script using ansible playbook
+      ansible.builtin.script: /home/jenish/exercise/script.py
+      args:
+        executable: python3
+      register: output
+    - debug:
+       var: output.stdout
+

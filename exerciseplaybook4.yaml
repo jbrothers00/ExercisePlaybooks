@@ -1,0 +1,13 @@
+---
+- name: Declare variables and print the variable using jinja2 templating
+  hosts: localhost
+  vars:
+    - username: Jenish
+    - userid: 1002
+    - usertype: global
+    - mail: jenish@gmail.com
+  tasks:
+    - name: print variables
+      debug:
+        msg: "UserName:{{ username }}, UserID:{{ userid }}, Usertype:{{ usertype }}, MailId:{{ mail }}"
+
