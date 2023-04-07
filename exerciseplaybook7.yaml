@@ -1,0 +1,13 @@
+--- 
+- name: Playbook to install MySQL db using ansible playbook
+  hosts: localhost
+  become_user: root
+  tasks:
+   - name: Install MySQL db
+     ansible.builtin.apt:
+         name: "{{ item }}"
+         state: latest
+     with_items:
+         - mysql-server
+         - mysql-client
+

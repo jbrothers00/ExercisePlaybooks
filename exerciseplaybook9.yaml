@@ -1,0 +1,15 @@
+---
+- name: Create a new employee database
+  hosts: localhost
+  tasks:
+    - name: Install python mysqldb
+      ansible.builtin.apt:
+         name: python-mysqldb
+         state: present
+    - name: Start a sql service
+      shell: "service mysql start"
+      register: output
+    - name: Create a Emplooye db
+      mysql_db: 
+       name: employee_db
+       state: present  
