@@ -1,0 +1,9 @@
+---
+- name: Create a Employee database
+  hosts: localhost
+  tasks:
+    - name: Start Mysql 
+      service: 
+       name: mysql
+       state: started
+       enabled: yes

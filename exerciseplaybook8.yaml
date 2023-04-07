@@ -1,0 +1,8 @@
+---
+- name: install the latest version of apache
+  hosts: localhost
+  tasks:
+    - name: install httpd
+      ansible.builtin.apt:
+        name: nginx
+        state: latest 

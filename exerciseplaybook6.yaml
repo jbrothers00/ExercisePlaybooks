@@ -1,0 +1,14 @@
+---
+- name: Print the average of the marks
+  hosts: localhost
+  vars:
+    marks:
+      - 98
+      - 78
+      - 56
+      - 90
+      - 78
+  tasks:
+     - debug:
+        msg: '{{ marks | average}}'
+
